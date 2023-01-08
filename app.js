@@ -48,6 +48,7 @@ Array.from(operators).forEach((o) => {
 
 ac.addEventListener("click", () => {
   process.innerHTML = "";
+  result.innerHTML = "";
 });
 
 equal.addEventListener("click", (e) => {
