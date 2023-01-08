@@ -9,41 +9,46 @@
 </head>
 <body>
     <div class="calculator">
-        <section class="screen"></section>
+        <section class="screen">
+            <p id="result"></p>
+            <p id="process"></p>
+        </section>
         <section class="calculate">
             <table class="calculate-buttons">
                 <tr>
-                    <td><button class="light-grey AC">AC</button> </td>
-                    <td><button class="light-grey plus-minus">±</button> </td>
-                    <td><button class="light-grey percent">%</button> </td>
-                    <td><button class="orange-yellow 
-                    divide">÷</button> </td>
+                    <td><button id="ac" class="light-grey">AC</button> </td>
+                    <td><button id="plus-minus" class="light-grey">±</button> </td>
+                    <td><button id="percent" class="light-grey ">%</button> </td>
+                    <td><button id="divide" class="visibil orange-yellow 
+                     operators">/</button> </td>
                 </tr>
                 <tr>
-                    <td><button class="dark-grey seven">7</button></td>
-                    <td><button class="dark-grey eight">8</button></td>
-                    <td><button class="dark-grey nine">9</button></td>
-                    <td><button class="orange-yellow multiply">x</button></td>
+                    <td><button id="seven" class="visibil number dark-grey ">7</button></td>
+                    <td><button id="eight" class="visibil number  dark-grey ">8</button></td>
+                    <td><button id="nine" class="visibil number  dark-grey ">9</button></td>
+                    <td><button id="multiply" class="visibil orange-yellow  operators">*</button></td>
                 </tr>
                 <tr>
-                    <td><button class="dark-grey four">4</button></td>
-                    <td><button class="dark-grey five">5</button></td>
-                    <td><button class="dark-grey six">6</button></td>
-                    <td><button class="orange-yellow minus">-</button></td>
+                    <td><button id="four" class="visibil number  dark-grey ">4</button></td>
+                    <td><button id="five" class="visibil number  dark-grey ">5</button></td>
+                    <td><button id="six" class="visibil number  dark-grey">6</button></td>
+                    <td><button id="minus" class="visibil orange-yellow  operators">-</button></td>
                 </tr>
                 <tr>
-                    <td><button class="dark-grey one">1</button></td>
-                    <td><button class="dark-grey two">2</button></td>
-                    <td><button class="dark-grey three">3</button></td>
-                    <td><button class="orange-yellow plus">+</button></td>
+                    <td><button id="one" class="visibil number  dark-grey ">1</button></td>
+                    <td><button id="two" class="visibil number  dark-grey">2</button></td>
+                    <td><button id="three" class="visibil number  dark-grey ">3</button></td>
+                    <td><button id="plus" class="visibil orange-yellow  operators">+</button></td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="zero"><button class="dark-grey zero">0</button></td>
-                    <td><button class="dark-grey dot">.</button></td>
-                    <td><button class="dark-grey equal">=</button></td>
+                    <td colspan="2" class="zero"><button id="zero" class="visibil number  dark-grey ">0</button></td>
+                    <td><button id="dot" class="visibil number dark-grey ">.</button></td>
+                    <td><button id="equal" class="dark-grey l">=</button></td>
                 </tr>
             </table>
         </section>
     </div>
+
+    <script src="./app.js"></script>
 </body>
 </html>

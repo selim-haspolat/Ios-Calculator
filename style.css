@@ -1,65 +1,83 @@
-:root{
-    --black: #000;
-    --grey-light:#A5A5A5;
-    --grey-dark:#333333;
-    --orange-yellow:#F1A33C;
+:root {
+  --black: #000;
+  --grey-light: #a5a5a5;
+  --grey-dark: #333333;
+  --orange-yellow: #f1a33c;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    display: flex;
-    justify-content: center;
-}
-
-.calculator{
-    background-color: var(--black);
-    color: #fff;
-    width: fit-content;
-    margin-top: 3rem;
-    border-radius: 50px;
-    padding: 1.5rem;
+body {
+  display: flex;
+  justify-content: center;
 }
 
-
-.screen{
-    height: 250px;
+.calculator {
+  background-color: var(--black);
+  color: #fff;
+  width: 500px;
+  margin-top: 0rem;
+  border-radius: 50px;
+  padding: 1.5rem;
+  scale: 0.9;
 }
 
-
-button{
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: var(--orange-yellow);
-    cursor: pointer;
-    margin: 5px;
-    font-size: 45px;
-}
-.zero button{
-    padding-left: 40px;
-    text-align: left;
-    width: 96%;
-    border-radius: 50px;
+.screen {
+  height: 250px;
+  display: grid;
+  grid-template-areas:
+    "result result result"
+    "proccess proccess proccess";
+  text-align: right;
+  padding: 1.5rem;
+  font-size: 45px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  gap: 3rem;
 }
 
-.dark-grey{
-    background-color: var(--grey-dark);
-    color: #fff;
+#result {
+  grid-area: result;
+  opacity: 0.7;
+}
+#process {
+  font-size: 4rem;
+  grid-area: proccess;
 }
 
-.light-grey{
-    background-color: var(--grey-light);
+button {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: var(--orange-yellow);
+  cursor: pointer;
+  margin: 5px;
+  font-size: 45px;
+}
+.zero button {
+  padding-left: 40px;
+  text-align: left;
+  width: 96%;
+  border-radius: 50px;
 }
 
-.orange-yellow{
-    background-color: var(--orange-yellow);
-    color: #fff;
+.dark-grey {
+  background-color: var(--grey-dark);
+  color: #fff;
 }
 
-button:hover{
-    opacity: .4;
+.light-grey {
+  background-color: var(--grey-light);
+}
+
+.orange-yellow {
+  background-color: var(--orange-yellow);
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.4;
 }
