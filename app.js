@@ -38,10 +38,13 @@ Array.from(operators).forEach((o) => {
         (v) => v.innerHTML == process.innerHTML[process.innerHTML.length - 2]
       )
     ) {
-      process.innerHTML = process.innerHTML.replace(
-        process.innerHTML[process.innerHTML.length - 2],
-        ""
-      );
+      //*#1
+      // process.innerHTML = process.innerHTML.replaceAll(
+      //   process.innerHTML[process.innerHTML.length - 2],
+      //   ""
+      // );
+      //* #2
+      process.innerHTML = process.innerHTML.slice(0,process.innerHTML.length -2) + process.innerHTML.slice(process.innerHTML.length -1)
     }
   });
 });
