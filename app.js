@@ -24,7 +24,7 @@ let percent = document.getElementById('percent');
 
 Array.from(num).forEach((e) => {
   e.addEventListener("click", (x) => {
-    process.innerHTML += x.target.innerHTML;
+    process.innerText += x.target.innerText;
     console.log(process);
     console.log(result);
   });
@@ -32,38 +32,38 @@ Array.from(num).forEach((e) => {
 
 Array.from(operators).forEach((o) => {
   o.addEventListener("click", (i) => {
-    process.innerHTML += i.target.innerHTML;
+    process.innerText += i.target.innerText;
     if (
       Array.from(operators).some(
-        (v) => v.innerHTML == process.innerHTML[process.innerHTML.length - 2]
+        (v) => v.innerText == process.innerText[process.innerText.length - 2]
       )
     ) {
       //*#1
-      // process.innerHTML = process.innerHTML.replaceAll(
-      //   process.innerHTML[process.innerHTML.length - 2],
+      // process.innerText = process.innerText.replaceAll(
+      //   process.innerText[process.innerText.length - 2],
       //   ""
       // );
       //* #2
-      process.innerHTML = process.innerHTML.slice(0,process.innerHTML.length -2) + process.innerHTML.slice(process.innerHTML.length -1)
+      process.innerText = process.innerText.slice(0,process.innerText.length -2) + process.innerText.slice(process.innerText.length -1)
     }
   });
 });
 
 ac.addEventListener("click", () => {
-  process.innerHTML = "";
-  result.innerHTML = "";
+  process.innerText = "";
+  result.innerText = "";
 });
 
 equal.addEventListener("click", (e) => {
-  c = process.innerHTML.toString();
-  result.innerHTML = eval(c);
-  process.innerHTML = "";
+  c = process.innerText.toString();
+  result.innerText = eval(c);
+  process.innerText = "";
 });
 
 plusMinus.addEventListener("click",() => {
-  process.innerHTML = eval(process.innerHTML * -1)
+  process.innerText = eval(process.innerText * -1)
 })
 
 percent.addEventListener("click",() => {
-    process.innerHTML += " / 100 *"
+    process.innerText += " / 100 *"
 })
